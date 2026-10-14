@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Política de privacidad de CELER, extensión de gestión de pestañas de Chrome.">
+<meta name="color-scheme" content="dark light">
+<title>Política de privacidad — CELER</title>
+<style>
+:root{color-scheme:dark;--bg:#0b111a;--panel:#121c27;--text:#e9f3f7;--muted:#a3b7c3;--line:#2a3b48;--accent:#80dbea}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:800px;margin:auto;padding:48px 22px 76px}header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:30px}
+.brand{font-weight:900;letter-spacing:.24em;color:var(--accent);font-size:14px}.lead{font-size:18px;color:var(--muted)}
+h1{font-size:clamp(30px,5vw,48px);letter-spacing:-.04em;line-height:1.12;margin:12px 0 20px}h2{font-size:20px;margin:36px 0 8px;color:#d1f7fc}
+p,li{color:var(--muted)}strong{color:var(--text)}ul{padding-left:22px}li{margin:8px 0}a{color:var(--accent)}
+.summary{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:16px 20px}
+footer{border-top:1px solid var(--line);margin-top:45px;padding-top:16px;color:var(--muted);font-size:13px}
+@media(prefers-color-scheme:light){:root{color-scheme:light;--bg:#f7fafc;--panel:#eaf3f7;--text:#142832;--muted:#435d6a;--line:#c4d5dc;--accent:#006577}h2{color:#124e60}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="brand">CELER / PRIVACIDAD</div>
+<h1>Política de privacidad</h1>
+<p class="lead">Extensión CELER — Gestor de rendimiento para Chrome, versión 0.1.0.</p>
+<p><strong>Última actualización:</strong> 14 de octubre de 2026.</p>
+</header>
+<section class="summary"><strong>Resumen:</strong> CELER administra pestañas y procesa determinada información de navegación de manera local para suspender, recargar o cerrar pestañas, proteger formularios y aplicar optimizaciones opcionales. No utiliza cuentas, servidores propios, anuncios ni herramientas de seguimiento remoto. Sus datos no se venden ni se envían al desarrollador.</section>
+<section><h2>1. Finalidad</h2><p>CELER tiene como único propósito gestionar el rendimiento y los recursos del navegador mediante suspensión, recarga, cierre y recuperación de pestañas, así como protecciones y ajustes de recursos directamente relacionados con esa finalidad.</p></section>
+<section><h2>2. Información que procesa</h2><ul>
+<li><strong>Pestañas y navegación:</strong> dirección URL, nombre o título de pestañas abiertas, dominio, estado activo o suspendido, indicadores de audio, fijación e instante de último acceso. Se utilizan para decidir qué pestañas gestionar y cuáles proteger.</li>
+<li><strong>Recuperación de pestañas:</strong> al usar la función de cierre y recuperación, CELER guarda temporalmente la URL; con Auto KillTab opcional también guarda localmente el título y la fecha de cierre. El archivo automático conserva hasta 50 entradas.</li>
+<li><strong>Preferencias y estadísticas:</strong> ajustes, dominios protegidos, reglas de recarga y contadores de acciones; se conservan localmente en el perfil de Chrome.</li>
+<li><strong>Actividad y formularios:</strong> detecta únicamente si hubo una modificación en un campo editable (indicador verdadero/falso); no lee ni almacena los valores escritos. Opcionalmente usa eventos de desplazamiento y movimiento del puntero sobre enlaces para guardar la posición vertical de desplazamiento de una página o precargar enlaces del mismo sitio. No construye perfiles de comportamiento.</li>
+<li><strong>Elementos de páginas:</strong> reconoce localmente estructuras y elementos, como campos editables, imágenes, reproductores, avisos de cookies y enlaces, exclusivamente para las funciones opcionales de protección y optimización. No extrae ni conserva el texto de las páginas, correos o conversaciones.</li>
+<li><strong>Memoria del equipo:</strong> consulta capacidad y memoria física disponible para ajustar la suspensión. No la envía fuera del navegador.</li>
+</ul><p><strong>Advertencia:</strong> algunas URL pueden incluir parámetros con información personal o identificadores de sesión introducidos por los sitios visitados. El archivo de recuperación conserva la URL completa y puede contener esos parámetros; utiliza la función de limpieza del archivo cuando lo necesites.</p></section>
+<section><h2>3. Dónde se almacenan los datos</h2><p>Los ajustes, estadísticas y archivo de recuperación automática se guardan en <code>chrome.storage.local</code> dentro del perfil local de Chrome. El estado de formularios y el último cierre manual se gestionan en <code>chrome.storage.session</code>. Si está habilitada la restauración de desplazamiento, la posición se guarda en <code>sessionStorage</code> de la página correspondiente. La extensión no utiliza sincronización remota ni una base de datos propia.</p></section>
+<section><h2>4. Transferencias y terceros</h2><p>CELER no transmite a servidores del desarrollador URL, títulos, contenido de páginas, datos de formularios, estadísticas ni información del equipo. No vende, comercializa ni comparte estos datos con anunciantes ni intermediarios. Algunas funciones activadas por el usuario, como la precarga de enlaces o el rechazo de cookies, pueden provocar solicitudes normales del navegador al sitio web abierto; esas solicitudes no constituyen una transferencia a un servidor de CELER.</p></section>
+<section><h2>5. Conservación y eliminación</h2><p>Las preferencias y estadísticas permanecen hasta que el usuario borre los datos de la extensión o la desinstale. El archivo de hasta 50 URL se actualiza cuando Auto KillTab guarda nuevas entradas y puede vaciarse desde CELER. Los estados temporales de sesión no están diseñados como historial permanente. Desinstalar la extensión elimina normalmente sus datos almacenados en el perfil local de Chrome. CELER no dispone de una copia en sus propios servidores para recuperar datos eliminados.</p></section>
+<section><h2>6. Permisos del navegador</h2><p>CELER utiliza los permisos <code>tabs</code> (administrar pestañas), <code>storage</code> (guardar ajustes y archivo local), <code>alarms</code> (programar revisiones), <code>system.memory</code> (conocer RAM física), <code>declarativeNetRequest</code> (reglas locales opcionales para recursos) y acceso a páginas HTTP/HTTPS (detectar cambios en formularios y aplicar optimizaciones de elementos). Las reglas opcionales pueden modificar la carga o presentación de algunos sitios web.</p></section>
+<section><h2>7. Seguridad y alcance</h2><p>El código de CELER 0.1.0 se incluye en la extensión y no descarga código JavaScript ejecutable remotamente. La extensión no garantiza restaurar estados de páginas, sesiones, formularios o datos no guardados tras un cierre o una recarga. El acceso al perfil de Chrome y los datos locales depende también de la seguridad del dispositivo.</p></section>
+<section><h2>8. Usos limitados de datos</h2><p>CELER utiliza los datos solo para proporcionar o mantener las funciones descritas. No los utiliza para publicidad personalizada, calificación crediticia, intermediación de datos ni fines distintos. El uso de la información recibida de las API de Chrome cumple con la <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use">Política de datos de usuario de Chrome Web Store</a>, incluidos sus requisitos de uso limitado.</p></section>
+<section><h2>9. Actualizaciones y contacto</h2><p>Si futuras versiones incorporan funciones que cambien la forma en que CELER utiliza datos, se actualizará esta página y las declaraciones de privacidad en Chrome Web Store antes de publicarse. Para consultas relacionadas con privacidad, utiliza el correo de contacto del editor indicado en la ficha oficial de CELER en Chrome Web Store.</p></section>
+<footer>CELER — Extensión independiente. Este documento describe exclusivamente la versión 0.1.0 y no sustituye los avisos de los sitios que visitas.</footer>
+</main>
+</body>
+</html>
